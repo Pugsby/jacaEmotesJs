@@ -3,9 +3,9 @@ function jacaEmotesJs__getEmote(a = 0, e = 5) {
         let s = document.createElement("canvas"),
             o = s.getContext("2d"),
             n = new Image;
-        s.width = 56, s.height = 56, n.onload = function() {
-            o.drawImage(n, a % e * 56, 56 * Math.floor(a / e), 56, 56, 0, 0, 56, 56);
-            let c = s.toDataURL();
+        s.width = 128, s.height = 128, n.onload = function() {
+            o.drawImage(n, a % e * 128, 128 * Math.floor(a / e), 128, 128, 0, 0, 128, 128);   
+            let c = s.toDataURL();256
             t(c)
         }, n.onerror = function() {
             c(Error("Failed to load image"))
@@ -15,10 +15,10 @@ function jacaEmotesJs__getEmote(a = 0, e = 5) {
 var jacaEmotesJs__emotes = [];
 
 function jacaEmotesJs__initEmotes() {
-    jacaEmotesJs__emotes = Array(19);
+    jacaEmotesJs__emotes = Array(23);
     for (var a = 0; a < jacaEmotesJs__emotes.length; a++) jacaEmotesJs__emotes[a] = jacaEmotesJs__getEmote(a)
 }
-var jacaEmotesJs__emoteNames = ["jacadaM", "jacadaXD", "jacadaNUT", "jacadaPOG", "jacadaPOP", "jacadaShy", "jacadaSob", "jacadaLove", "jacadaBlush", "jacadaLenny", "jacadaPeace", "jacadaSippy", "jacadaGlance", "jacadaHunger", "jacadaScreem", "jacadaStress", "jacadaCRACKED", "jacadaTrolled", "jacadaOMEGANUT"];
+var jacaEmotesJs__emoteNames = ["macaMoshi","macaMischief","macaPensive","jacaSoulStare","jacadaM", "jacadaXD", "jacadaNUT", "jacadaPOG", "jacadaPOP", "jacadaShy", "jacadaSob", "jacadaLove", "jacadaBlush", "jacadaLenny", "jacadaPeace", "jacadaSippy", "jacadaGlance", "jacadaHunger", "jacadaScreem", "jacadaStress", "jacadaCRACKED", "jacadaTrolled", "jacadaOMEGANUT"];
 async function parseJacaEmotes(a) {
     let e = await Promise.all(jacaEmotesJs__emotes);
     return a.replace(/_([^_]+)_/g, function(a, t) {

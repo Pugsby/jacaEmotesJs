@@ -66,7 +66,7 @@ function initializePage() {
     // Set favicon to the second emote (index 1)
     const favicon = document.getElementById("favicon");
     if (typeof jacaEmotesJs__emotes !== 'undefined' && jacaEmotesJs__emotes[1]) {
-        jacaEmotesJs__emotes[1].then(function(emoteDataUrl) {
+        jacaEmotesJs__emotes[5].then(function(emoteDataUrl) {
             favicon.href = emoteDataUrl;
         });
     }
