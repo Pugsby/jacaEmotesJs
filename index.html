@@ -10,88 +10,13 @@
 <body>
     <img id="imagePreview" class="image-preview" alt="Preview">
     
-    <!-- <p id="test">Test _jacadaXD_</p>  -->
     <h1 class="centerText">jacaEmotes.js Demo</h1>
     <h2>Emotes:</h2>
-    <!-- var jacaEmotesJs__emoteNames = ["jacadaM", "jacadaXD", "jacadaNUT", "jacadaPOG", "jacadaPOP", "jacadaShy", "jacadaSob", "jacadaLove", "jacadaBlush", "jacadaLenny", "jacadaPeace", "jacadaSippy", "jacadaGlance", "jacadaHunger", "jacadaScreem", "jacadaStress", "jacadaCRACKED", "jacadaTrolled", "jacadaOMEGANUT"]; -->
+    <!-- This div will be populated dynamically with JavaScript -->
     <div id="emotesDiv">
-        <div class="emoteDemo">
-            <p>jacadaM: </p>
-            <p class="parse">_jacadaM_</p>
-        </div>
-        <div class="emoteDemo">
-            <p>jacadaXD: </p>
-            <p class="parse">_jacadaXD_</p>
-        </div>
-        <div class="emoteDemo">
-            <p>jacadaNUT: </p>
-            <p class="parse">_jacadaNUT_</p>
-        </div>
-        <div class="emoteDemo">
-            <p>jacadaPOG: </p>
-            <p class="parse">_jacadaPOG_</p>
-        </div>
-        <div class="emoteDemo">
-            <p>jacadaPOP: </p>
-            <p class="parse">_jacadaPOP_</p>
-        </div>
-        <div class="emoteDemo">
-            <p>jacadaShy: </p>
-            <p class="parse">_jacadaShy_</p>
-        </div>
-        <div class="emoteDemo">
-            <p>jacadaSob: </p>
-            <p class="parse">_jacadaSob_</p>
-        </div>
-        <div class="emoteDemo">
-            <p>jacadaLove: </p>
-            <p class="parse">_jacadaLove_</p>
-        </div>
-        <div class="emoteDemo">
-            <p>jacadaBlush: </p>
-            <p class="parse">_jacadaBlush_</p>
-        </div>
-        <div class="emoteDemo">
-            <p>jacadaLenny: </p>
-            <p class="parse">_jacadaLenny_</p>
-        </div>
-        <div class="emoteDemo">
-            <p>jacadaPeace: </p>
-            <p class="parse">_jacadaPeace_</p>
-        </div>
-        <div class="emoteDemo">
-            <p>jacadaSippy: </p>
-            <p class="parse">_jacadaSippy_</p>
-        </div>
-        <div class="emoteDemo">
-            <p>jacadaGlance: </p>
-            <p class="parse">_jacadaGlance_</p>
-        </div>
-        <div class="emoteDemo">
-            <p>jacadaHunger: </p>
-            <p class="parse">_jacadaHunger_</p>
-        </div>
-        <div class="emoteDemo">
-            <p>jacadaScreem: </p>
-            <p class="parse">_jacadaScreem_</p>
-        </div>
-        <div class="emoteDemo">
-            <p>jacadaStress: </p>
-            <p class="parse">_jacadaStress_</p>
-        </div>
-        <div class="emoteDemo">
-            <p>jacadaCRACKED: </p>
-            <p class="parse">_jacadaCRACKED_</p>
-        </div>
-        <div class="emoteDemo">
-            <p>jacadaTrolled: </p>
-            <p class="parse">_jacadaTrolled_</p>
-        </div>
-        <div class="emoteDemo">
-            <p>jacadaOMEGANUT: </p>
-            <p class="parse">_jacadaOMEGANUT_</p>
-        </div>
+        <!-- Emotes will be loaded here by JavaScript -->
     </div>
+    
     <h2>Usage:</h2>
     <p>Just use "_EMOTENAME_" in your text and parse it with the following code:</p>
     <code>
@@ -133,37 +58,9 @@
     <p class="parse">please fork this repo and add animated emote support, I beg _jacadaSob_</p>
     <br><br>
     <p class="centerText">Made with nut by <a href="https://pugsby.github.io">Pugsby</a>. <span class="parse">_jacadaOMEGANUT_</span></p>
+    
     <script src="jacaEmotes.minified.js"></script>
-    <script>
-        function setupImagePreview() {
-            const previewImg = document.getElementById('imagePreview');
-            const imageLinks = document.querySelectorAll('a[href$=".png"], a[href$=".jpg"], a[href$=".jpeg"], a[href$=".gif"], a[href$=".webp"]');
-            imageLinks.forEach(function(link) {
-                link.addEventListener('mouseenter', function(e) {
-                    previewImg.src = this.href;
-                    previewImg.style.opacity = 1;
-                });
-                link.addEventListener('mousemove', function(e) {
-                    previewImg.style.left = (e.clientX + 15) + 'px';
-                    previewImg.style.top = (e.clientY + 15) + 'px';
-                });
-                link.addEventListener('mouseleave', function(e) {
-                    previewImg.style.opacity = 0;
-                });
-            });
-        }
-        var toParse = document.getElementsByClassName("parse");
-        Array.from(toParse).forEach(element => {
-            parseJacaEmotes(element.innerHTML)
-            .then(result => element.innerHTML = result);
-        });
-        document.addEventListener('DOMContentLoaded', setupImagePreview);
-        setupImagePreview();
-        var favicon = document.getElementById("favicon");
-        jacaEmotesJs__emotes[1].then(function(emoteDataUrl) {
-            favicon.href = emoteDataUrl;
-        });
-    </script>
+    <script src="showcase.js"></script>
 </body>
 </html>
 <!-- My code was NOT held together with hopes, dreams, and a lot of duct tape. (because I have no hopes or dreams, but I do have duct tape.) -->
