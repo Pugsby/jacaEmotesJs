@@ -1,0 +1,49 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(193, 226, 193);
+    background-color: rgb(38, 37, 33);
+}
+.centerText {
+    text-align: center;
+}
+#emotesDiv {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+.emoteDemo {
+    padding: 4px;
+    border: 1px solid rgb(193, 226, 193);
+    border-radius: 5px;
+    margin: 10px;
+    transition: all 0.2s ease;
+}
+.emoteDemo:hover {
+    border-color: rgb(255, 255, 255);
+}
+.emoteDemo:hover .jacadaEmote {
+    transform: scale(1.5) rotate(360deg);
+}
+.emoteDemo p {
+    margin: 0;
+    text-align: center;
+}
+.emoteDemo .jacadaEmote {
+    width: 100px;
+    height: 100px;
+    transform: none;
+    transition: all 0.2s ease;
+}
+code {
+    font-family: "Ubuntu Mono", monospace; 
+    background-color: rgb(16, 17, 16);
+    border-radius: 8px;
+    margin-left: 4px;
+    padding: 2px;
+}
+a {
+    color: rgb(0, 255, 68);
+}
+p {
+    margin: 4px;
+}

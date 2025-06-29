@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JacaEmotes.js Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <p id="test">Test _jacadaXD_</p>  -->
+    <h1 class="centerText">jacaEmotes.js Demo</h1>
+    <h2>Emotes:</h2>
+    <!-- var jacaEmotesJs__emoteNames = ["jacadaM", "jacadaXD", "jacadaNUT", "jacadaPOG", "jacadaPOP", "jacadaShy", "jacadaSob", "jacadaLove", "jacadaBlush", "jacadaLenny", "jacadaPeace", "jacadaSippy", "jacadaGlance", "jacadaHunger", "jacadaScreem", "jacadaStress", "jacadaCRACKED", "jacadaTrolled", "jacadaOMEGANUT"]; -->
+    <div id="emotesDiv">
+        <div class="emoteDemo">
+            <p>jacadaM: </p>
+            <p class="parse">_jacadaM_</p>
+        </div>
+        <div class="emoteDemo">
+            <p>jacadaXD: </p>
+            <p class="parse">_jacadaXD_</p>
+        </div>
+        <div class="emoteDemo">
+            <p>jacadaNUT: </p>
+            <p class="parse">_jacadaNUT_</p>
+        </div>
+        <div class="emoteDemo">
+            <p>jacadaPOG: </p>
+            <p class="parse">_jacadaPOG_</p>
+        </div>
+        <div class="emoteDemo">
+            <p>jacadaPOP: </p>
+            <p class="parse">_jacadaPOP_</p>
+        </div>
+        <div class="emoteDemo">
+            <p>jacadaShy: </p>
+            <p class="parse">_jacadaShy_</p>
+        </div>
+        <div class="emoteDemo">
+            <p>jacadaSob: </p>
+            <p class="parse">_jacadaSob_</p>
+        </div>
+        <div class="emoteDemo">
+            <p>jacadaLove: </p>
+            <p class="parse">_jacadaLove_</p>
+        </div>
+        <div class="emoteDemo">
+            <p>jacadaBlush: </p>
+            <p class="parse">_jacadaBlush_</p>
+        </div>
+        <div class="emoteDemo">
+            <p>jacadaLenny: </p>
+            <p class="parse">_jacadaLenny_</p>
+        </div>
+        <div class="emoteDemo">
+            <p>jacadaPeace: </p>
+            <p class="parse">_jacadaPeace_</p>
+        </div>
+        <div class="emoteDemo">
+            <p>jacadaSippy: </p>
+            <p class="parse">_jacadaSippy_</p>
+        </div>
+        <div class="emoteDemo">
+            <p>jacadaGlance: </p>
+            <p class="parse">_jacadaGlance_</p>
+        </div>
+        <div class="emoteDemo">
+            <p>jacadaHunger: </p>
+            <p class="parse">_jacadaHunger_</p>
+        </div>
+        <div class="emoteDemo">
+            <p>jacadaScreem: </p>
+            <p class="parse">_jacadaScreem_</p>
+        </div>
+        <div class="emoteDemo">
+            <p>jacadaStress: </p>
+            <p class="parse">_jacadaStress_</p>
+        </div>
+        <div class="emoteDemo">
+            <p>jacadaCRACKED: </p>
+            <p class="parse">_jacadaCRACKED_</p>
+        </div>
+        <div class="emoteDemo">
+            <p>jacadaTrolled: </p>
+            <p class="parse">_jacadaTrolled_</p>
+        </div>
+        <div class="emoteDemo">
+            <p>jacadaOMEGANUT: </p>
+            <p class="parse">_jacadaOMEGANUT_</p>
+        </div>
+    </div>
+    <h2>Usage:</h2>
+    <p>Just use "_EMOTENAME_" in your text and parse it with the following code:</p>
+    <code>
+        parseJacaEmotes(document.body.innerHTML)
+        .then(result => document.body.innerHTML = result);
+    </code>
+    <p>or, if you want a simpler approach, use class "parse" on the elements you want to parse:</p>
+    <code>
+        var toParse = document.getElementsByClassName("parse");
+        Array.from(toParse).forEach(element => {
+            parseJacaEmotes(element.innerHTML)
+            .then(result => element.innerHTML = result);
+        });
+    </code>
+    <h3>Including the script:</h3>
+    <p>You have two (easy) options.</p>
+    <p>A. <a href="jacaEmotes.minified.js">Download the minified script</a> and include it in your HTML file.</p>
+    <code>
+        &lt;script src="jacaEmotes.minified.js"&gt;&lt;/script&gt;
+    </code> 
+    <p>B. Get it from this website instead (less reliable):</p>
+    <code>
+        &lt;script src="https://pugsbyy.github.io/jacaEmotesJs/jacaEmotes.minified.js"&gt;&lt;/script&gt;
+    </code>
+    <p>Or, you can use the hardest approach which does nothing better. </p>
+    <p>You have to include static.png in EVERY SINGLE FOLDER where you're using this script.</p>
+    <a href="pretty/static.png">Static.png</a>
+    <p>And obviously include the script in your HTML file.</p>
+    <a href="pretty/jacaEmotes.js">JacaEmotes.js</a>
+    <h2>Stuff I wanted to add but couldn't:</h2>
+    <p>Animated emotes, didn't do it because I don't know how to do it and I had already hard coded the emotes in the script.</p>
+    <p>Left over anim.png file:</p>
+    <a href="pretty/anim.png">Anim.png</a>
+    <h2>Credits:</h2>
+    <p>All code goes to me, <a href="pugsby.github.io">Pugsby</a>.</p>
+    <p>All the emotes are from <a href="https://www.youtube.com/@Jacadamia">Jacadamia</a>.</p>
+    <p class="parse">You don't have to credit me, but please credit Jacadamia as they are the one that actually made the emotes _jacadaPeace_.</p>
+    <h2>For good JS coders:</h2>
+    <p class="parse">please fork this repo and add animated emote support, I beg _jacadaSob_</p>
+    <br><br>
+    <p class="centerText">Made with nut by <a href="https://pugsby.github.io">Pugsby</a>. <span class="parse">_jacadaOMEGANUT_</span></p>
+    <script src="jacaEmotes.minified.js"></script>
+    <script>
+        /* var test = document.getElementById("test");
+        parseJacaEmotes(test.innerHTML)
+        .then(result => test.innerHTML = result); */
+        var toParse = document.getElementsByClassName("parse");
+        Array.from(toParse).forEach(element => {
+            parseJacaEmotes(element.innerHTML)
+            .then(result => element.innerHTML = result);
+        });
+    </script>
+</body>
+</html>
+<!-- My code was NOT held together with hopes, dreams, and a lot of duct tape. (because I have no hopes or dreams, but I do have duct tape.) -->
