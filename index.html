@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JacaEmotes.js Demo</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="" id="favicon">
 </head>
 <body>
+    <img id="imagePreview" class="image-preview" alt="Preview">
+    
     <!-- <p id="test">Test _jacadaXD_</p>  -->
     <h1 class="centerText">jacaEmotes.js Demo</h1>
     <h2>Emotes:</h2>
@@ -132,13 +135,33 @@
     <p class="centerText">Made with nut by <a href="https://pugsby.github.io">Pugsby</a>. <span class="parse">_jacadaOMEGANUT_</span></p>
     <script src="jacaEmotes.minified.js"></script>
     <script>
-        /* var test = document.getElementById("test");
-        parseJacaEmotes(test.innerHTML)
-        .then(result => test.innerHTML = result); */
+        function setupImagePreview() {
+            const previewImg = document.getElementById('imagePreview');
+            const imageLinks = document.querySelectorAll('a[href$=".png"], a[href$=".jpg"], a[href$=".jpeg"], a[href$=".gif"], a[href$=".webp"]');
+            imageLinks.forEach(function(link) {
+                link.addEventListener('mouseenter', function(e) {
+                    previewImg.src = this.href;
+                    previewImg.style.opacity = 1;
+                });
+                link.addEventListener('mousemove', function(e) {
+                    previewImg.style.left = (e.clientX + 15) + 'px';
+                    previewImg.style.top = (e.clientY + 15) + 'px';
+                });
+                link.addEventListener('mouseleave', function(e) {
+                    previewImg.style.opacity = 0;
+                });
+            });
+        }
         var toParse = document.getElementsByClassName("parse");
         Array.from(toParse).forEach(element => {
             parseJacaEmotes(element.innerHTML)
             .then(result => element.innerHTML = result);
+        });
+        document.addEventListener('DOMContentLoaded', setupImagePreview);
+        setupImagePreview();
+        var favicon = document.getElementById("favicon");
+        jacaEmotesJs__emotes[1].then(function(emoteDataUrl) {
+            favicon.href = emoteDataUrl;
         });
     </script>
 </body>
